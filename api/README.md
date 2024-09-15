@@ -1,6 +1,6 @@
 # Classificador de estado de saúde fetal
 
-API inteligente para classificação do estado de saúde fetal baseado em dados de cardiotocografia. A classificação é realizada utilizando-se um modelo de árvore de decisão com dados padronizados. O modelo foi treinado com base em dados de 2126 pacientes, o dataset está disponível em https://www.kaggle.com/datasets/andrewmvd/fetal-health-classification/data.
+API inteligente para classificação do estado de saúde fetal baseado em dados de cardiotocografia.
 
 ## Entradas
 
