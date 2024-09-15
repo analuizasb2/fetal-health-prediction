@@ -3,9 +3,11 @@ from flask import redirect
 from schema.cardiotocogram_input import Cardiotocogram
 from model.pre_processor import PreProcessor
 from model.model import FetalHealthClassifier
+from flask_cors import CORS
 
 info = Info(title="Fetal Health Classifier", version="1.0.0")
 app = OpenAPI(__name__, info=info)
+CORS(app)
 
 pre_processor = PreProcessor()
 classifier = FetalHealthClassifier()
