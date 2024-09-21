@@ -4,3 +4,5 @@ pydantic
 scikit-learn==1.3.2
 numpy
 joblib
+pytest
+pandas

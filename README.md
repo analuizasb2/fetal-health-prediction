@@ -4,6 +4,6 @@ Este projeto consiste em um MVP de um sistema de classificação do estado de sa
 
 O projeto está organizado nos seguintes diretórios:
 
-- `api`: API RESTful para classificação do estado de saúde fetal
+- `api`: API RESTful para classificação do estado de saúde fetal. Veja o [README](api/README.md) para mais informações.
 - `dataset`: Dataset utilizado para treinamento do modelo
 - `frontend`: Frontend para interação com a API
