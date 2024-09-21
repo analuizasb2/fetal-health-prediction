@@ -44,6 +44,41 @@
       .text-center {
         text-align: center;
       }
+      .result-neutral {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-weight: bold;
+        background-color: #a2a6a8;
+      }
+      .result-healthy {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-weight: bold;
+        background-color: #4bc6f6;
+      }
+      .result-suspect {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-weight: bold;
+        background-color: #f6e24b;
+      }
+      .result-pathological {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-weight: bold;
+        background-color: #f6924b;
+      }
+      .error {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-weight: bold;
+        background-color: red;
+      }
     </style>
   </head>
   <body>
@@ -308,61 +343,9 @@
           <button type="button" onclick="classify()">Classify</button>
         </div>
       </form>
-      <div id="result"></div>
+      <div id="result" class="result-neutral">Classification:</div>
     </div>
 
-    <script>
-      function classify() {
-        const form = document.getElementById("classification-form");
-        const formData = new FormData(form);
-
-        const data = {};
-        formData.forEach((value, key) => {
-          data[key] = parseFloat(value);
-        });
-        console.log(data);
-        let responseJson;
-        let url = "http://127.0.0.1:5000/classify";
-        const response = fetch(url, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          method: "post",
-          body: JSON.stringify(data),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Response from backend was not ok");
-            }
-            return response.json();
-          })
-          .then((data) => {
-            console.log("Success:", data);
-            const classification = data.classification;
-            console.log("Classification:", classification);
-
-            let classificationResult;
-            switch (classification) {
-              case 1:
-                classificationResult = "Normal";
-              case 2:
-                classificationResult = "Suspect";
-              case 3:
-                classificationResult = "Pathological";
-              default:
-                classificationResult = "Unknown";
-            }
-            document.getElementById(
-              "result"
-            ).innerText = `Classification: ${classificationResult}`;
-          })
-          .catch((error) => {
-            document.getElementById("result").innerText =
-              "An error occurred. Please try again.";
-          });
-
-        console.log(response.data);
-      }
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
