@@ -1,197 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Classification Form</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        .form-group button {
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .form-group button:hover {
-            background-color: #0056b3;
-        }
-        .image-center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-        .text-center {
-            text-align: center;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .form-group button {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .form-group button:hover {
+        background-color: #0056b3;
+      }
+      .image-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      .text-center {
+        text-align: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="text-center">
-            <h1>Classification of Fetal Health Status</h1>
+      <div class="text-center">
+        <h1>Classification of Fetal Health Status</h1>
+      </div>
+      <div class="form-group">
+        <img
+          src="./images/cardiotocogram.png"
+          alt="Static Image"
+          class="image-center"
+        />
+      </div>
+      <form id="classification-form">
+        <div class="form-group">
+          <label for="baseline_value">Baseline Value:</label>
+          <input
+            type="number"
+            id="baseline_value"
+            name="baseline_value"
+            step="any"
+            required
+            value="0"
+          />
         </div>
         <div class="form-group">
-            <img src="./images/cardiotocogram.png" alt="Static Image" class="image-center">
+          <label for="accelerations">Accelerations:</label>
+          <input
+            type="number"
+            id="accelerations"
+            name="accelerations"
+            step="any"
+            required
+            value="0"
+          />
         </div>
-        <form id="classification-form">
-            <div class="form-group">
-                <label for="baseline_value">Baseline Value:</label>
-                <input type="number" id="baseline_value" name="baseline_value" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="accelerations">Accelerations:</label>
-                <input type="number" id="accelerations" name="accelerations" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="uterine_contractions">Uterine Contractions:</label>
-                <input type="number" id="uterine_contractions" name="uterine_contractions" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="fetal_movements">Fetal Movements:</label>
-                <input type="number" id="fetal_movements" name="fetal_movements" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="light_decelerations">Light Decelerations:</label>
-                <input type="number" id="light_decelerations" name="light_decelerations" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="severe_decelerations">Severe Decelerations:</label>
-                <input type="number" id="severe_decelerations" name="severe_decelerations" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="prolongued_decelerations">Prolongued Decelerations:</label>
-                <input type="number" id="prolongued_decelerations" name="prolongued_decelerations" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="abnormal_short_term_variability">Abnormal Short Term Variability:</label>
-                <input type="number" id="abnormal_short_term_variability" name="abnormal_short_term_variability" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="mean_value_of_short_term_variability">Mean Value of Short Term Variability:</label>
-                <input type="number" id="mean_value_of_short_term_variability" name="mean_value_of_short_term_variability" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="percentage_of_time_with_abnormal_long_term_variability">Percentage of Time with Abnormal Long Term Variability:</label>
-                <input type="number" id="percentage_of_time_with_abnormal_long_term_variability" name="percentage_of_time_with_abnormal_long_term_variability" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="mean_value_of_long_term_variability">Mean Value of Long Term Variability:</label>
-                <input type="number" id="mean_value_of_long_term_variability" name="mean_value_of_long_term_variability" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_width">Histogram Width:</label>
-                <input type="number" id="histogram_width" name="histogram_width" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_min">Histogram Min:</label>
-                <input type="number" id="histogram_min" name="histogram_min" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_max">Histogram Max:</label>
-                <input type="number" id="histogram_max" name="histogram_max" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_number_of_peaks">Histogram Number of Peaks:</label>
-                <input type="number" id="histogram_number_of_peaks" name="histogram_number_of_peaks" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_number_of_zeroes">Histogram Number of Zeroes:</label>
-                <input type="number" id="histogram_number_of_zeroes" name="histogram_number_of_zeroes" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_mode">Histogram Mode:</label>
-                <input type="number" id="histogram_mode" name="histogram_mode" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_mean">Histogram Mean:</label>
-                <input type="number" id="histogram_mean" name="histogram_mean" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_median">Histogram Median:</label>
-                <input type="number" id="histogram_median" name="histogram_median" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_variance">Histogram Variance:</label>
-                <input type="number" id="histogram_variance" name="histogram_variance" step="any" required>
-            </div>
-            <div class="form-group">
-                <label for="histogram_tendency">Histogram Tendency:</label>
-                <input type="number" id="histogram_tendency" name="histogram_tendency" step="any" required>
-            </div>
-            <div class="form-group">
-                <button type="button" onclick="classify()">Classify</button>
-            </div>
-        </form>
-        <div id="result"></div>
+        <div class="form-group">
+          <label for="uterine_contractions">Uterine Contractions:</label>
+          <input
+            type="number"
+            id="uterine_contractions"
+            name="uterine_contractions"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="fetal_movements">Fetal Movements:</label>
+          <input
+            type="number"
+            id="fetal_movements"
+            name="fetal_movements"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="light_decelerations">Light Decelerations:</label>
+          <input
+            type="number"
+            id="light_decelerations"
+            name="light_decelerations"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="severe_decelerations">Severe Decelerations:</label>
+          <input
+            type="number"
+            id="severe_decelerations"
+            name="severe_decelerations"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="prolongued_decelerations"
+            >Prolongued Decelerations:</label
+          >
+          <input
+            type="number"
+            id="prolongued_decelerations"
+            name="prolongued_decelerations"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="abnormal_short_term_variability"
+            >Abnormal Short Term Variability:</label
+          >
+          <input
+            type="number"
+            id="abnormal_short_term_variability"
+            name="abnormal_short_term_variability"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="mean_value_of_short_term_variability"
+            >Mean Value of Short Term Variability:</label
+          >
+          <input
+            type="number"
+            id="mean_value_of_short_term_variability"
+            name="mean_value_of_short_term_variability"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="percentage_of_time_with_abnormal_long_term_variability"
+            >Percentage of Time with Abnormal Long Term Variability:</label
+          >
+          <input
+            type="number"
+            id="percentage_of_time_with_abnormal_long_term_variability"
+            name="percentage_of_time_with_abnormal_long_term_variability"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="mean_value_of_long_term_variability"
+            >Mean Value of Long Term Variability:</label
+          >
+          <input
+            type="number"
+            id="mean_value_of_long_term_variability"
+            name="mean_value_of_long_term_variability"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_width">Histogram Width:</label>
+          <input
+            type="number"
+            id="histogram_width"
+            name="histogram_width"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_min">Histogram Min:</label>
+          <input
+            type="number"
+            id="histogram_min"
+            name="histogram_min"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_max">Histogram Max:</label>
+          <input
+            type="number"
+            id="histogram_max"
+            name="histogram_max"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_number_of_peaks"
+            >Histogram Number of Peaks:</label
+          >
+          <input
+            type="number"
+            id="histogram_number_of_peaks"
+            name="histogram_number_of_peaks"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_number_of_zeroes"
+            >Histogram Number of Zeroes:</label
+          >
+          <input
+            type="number"
+            id="histogram_number_of_zeroes"
+            name="histogram_number_of_zeroes"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_mode">Histogram Mode:</label>
+          <input
+            type="number"
+            id="histogram_mode"
+            name="histogram_mode"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_mean">Histogram Mean:</label>
+          <input
+            type="number"
+            id="histogram_mean"
+            name="histogram_mean"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_median">Histogram Median:</label>
+          <input
+            type="number"
+            id="histogram_median"
+            name="histogram_median"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_variance">Histogram Variance:</label>
+          <input
+            type="number"
+            id="histogram_variance"
+            name="histogram_variance"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="histogram_tendency">Histogram Tendency:</label>
+          <input
+            type="number"
+            id="histogram_tendency"
+            name="histogram_tendency"
+            step="any"
+            required
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <button type="button" onclick="classify()">Classify</button>
+        </div>
+      </form>
+      <div id="result"></div>
     </div>
 
     <script>
-        function classify() {
-            const form = document.getElementById('classification-form');
-            const formData = new FormData(form);
+      function classify() {
+        const form = document.getElementById("classification-form");
+        const formData = new FormData(form);
 
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = parseFloat(value);
-            });
-//             const fakedata = {
-// "baseline_value": 14,
-// "accelerations": 1,
-// "uterine_contractions": 1,
-// "fetal_movements": 11,
-// "light_decelerations": 1,
-// "severe_decelerations": 1,
-// "prolongued_decelerations": 1,
-// "abnormal_short_term_variability": 11,
-// "mean_value_of_short_term_variability": 1,
-// "percentage_of_time_with_abnormal_long_term_variability": 1,
-// "mean_value_of_long_term_variability": 1,
-// "histogram_width": 1,
-// "histogram_min": 689,
-// "histogram_max": 1,
-// "histogram_number_of_peaks": 1,
-// "histogram_number_of_zeroes": 1,
-// "histogram_mode": 1,
-// "histogram_mean": 1,
-// "histogram_median": 1,
-// "histogram_variance": 1,
-// "histogram_tendency": 1
-// };
-            let url = 'http://127.0.0.1:5000/classify';
-            fetch(url, {
-                method: 'post',
-                body: fakedata
-            })
-                .then((response) => response.json())
-                .catch((error) => {
-                console.error('Error:', error);
-                });
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = parseFloat(value);
+        });
+        console.log(data);
+        let responseJson;
+        let url = "http://127.0.0.1:5000/classify";
+        const response = fetch(url, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "post",
+          body: JSON.stringify(data),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Response from backend was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log("Success:", data);
+            const classification = data.classification;
+            console.log("Classification:", classification);
 
-            console.log(fakedata);
+            let classificationResult;
+            switch (classification) {
+              case 1:
+                classificationResult = "Normal";
+              case 2:
+                classificationResult = "Suspect";
+              case 3:
+                classificationResult = "Pathological";
+              default:
+                classificationResult = "Unknown";
+            }
+            document.getElementById(
+              "result"
+            ).innerText = `Classification: ${classificationResult}`;
+          })
+          .catch((error) => {
+            document.getElementById("result").innerText =
+              "An error occurred. Please try again.";
+          });
 
-            document.getElementById('result').innerText = JSON.stringify(data, null, 2);
-        }
+        console.log(response.data);
+      }
     </script>
-</body>
+  </body>
 </html>
