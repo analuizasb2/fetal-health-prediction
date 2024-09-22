@@ -30,7 +30,5 @@ def test_model_accuracy():
     predictions = classifier.classify_patient(scaled_x_test)
     accuracy = accuracy_score(y_test, predictions)
 
-    print(predictions)
     # assert
-    print(accuracy)
     assert accuracy > 0.85
