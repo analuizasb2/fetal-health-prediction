@@ -4,7 +4,7 @@ from schema.cardiotocogram_input import Cardiotocogram
 
 class PreProcessor:
     def __init__(self):
-        filename = './pipelines/standardscaler_fetalhealth.pkl'
+        filename = './pipelines/scaler_fetalhealth.pkl'
         self.scaler = pickle.load(open(filename, 'rb'))
 
     def pre_process_patient(self, cardiotocogram: Cardiotocogram):
