@@ -22,6 +22,6 @@ def home():
 def classify(body: Cardiotocogram):
     """Classifica a saúde fetal.
     """
-    input_preprocessed = pre_processor.pre_process(body)
+    input_preprocessed = pre_processor.pre_process_patient(body)
     classification = classifier.classify_patient(input_preprocessed)
     return {"classification": classification[0]}

@@ -4,7 +4,7 @@ class Cardiotocogram (BaseModel):
     baseline_value: float
     accelerations: float
     uterine_contractions: float
-    fetal_movements: float
+    fetal_movement: float
     light_decelerations: float
     severe_decelerations: float
     prolongued_decelerations: float
