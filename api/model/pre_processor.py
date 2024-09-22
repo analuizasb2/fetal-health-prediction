@@ -12,5 +12,8 @@ class PreProcessor:
         return self.scaler.transform(input_data.reshape(1, -1))
     
     def pre_process_patients(self, cardiotocograms: list[Cardiotocogram]):
-        input_data = np.array([list(c.model_dump().values()) for c in cardiotocograms])
-        return self.scaler.transform(input_data)
+        output = []
+        for c in cardiotocograms:
+           processed = self.pre_process_patient(c)
+           output.append(processed)
+        return np.vstack(output)
